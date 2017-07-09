@@ -47,6 +47,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox14.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.SuspendLayout()
@@ -54,7 +55,7 @@ Partial Class Form1
         'TextBox39
         '
         Me.TextBox39.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox39.Location = New System.Drawing.Point(19, 298)
+        Me.TextBox39.Location = New System.Drawing.Point(229, 19)
         Me.TextBox39.Name = "TextBox39"
         Me.TextBox39.Size = New System.Drawing.Size(149, 24)
         Me.TextBox39.TabIndex = 79
@@ -62,16 +63,18 @@ Partial Class Form1
         '
         'GroupBox14
         '
+        Me.GroupBox14.Controls.Add(Me.Label2)
         Me.GroupBox14.Controls.Add(Me.Label131)
         Me.GroupBox14.Controls.Add(Me.Label130)
         Me.GroupBox14.Controls.Add(Me.Label107)
         Me.GroupBox14.Controls.Add(Me.TextBox38)
         Me.GroupBox14.Controls.Add(Me.Label105)
+        Me.GroupBox14.Controls.Add(Me.TextBox39)
         Me.GroupBox14.Controls.Add(Me.TextBox37)
         Me.GroupBox14.Controls.Add(Me.Label102)
         Me.GroupBox14.Location = New System.Drawing.Point(19, 149)
         Me.GroupBox14.Name = "GroupBox14"
-        Me.GroupBox14.Size = New System.Drawing.Size(403, 123)
+        Me.GroupBox14.Size = New System.Drawing.Size(403, 131)
         Me.GroupBox14.TabIndex = 78
         Me.GroupBox14.TabStop = False
         Me.GroupBox14.Text = "Feed back from ASC unit (AI4)"
@@ -79,7 +82,7 @@ Partial Class Form1
         'Label131
         '
         Me.Label131.AutoSize = True
-        Me.Label131.Location = New System.Drawing.Point(356, 12)
+        Me.Label131.Location = New System.Drawing.Point(351, 49)
         Me.Label131.Name = "Label131"
         Me.Label131.Size = New System.Drawing.Size(27, 13)
         Me.Label131.TabIndex = 75
@@ -88,7 +91,7 @@ Partial Class Form1
         'Label130
         '
         Me.Label130.AutoSize = True
-        Me.Label130.Location = New System.Drawing.Point(231, 12)
+        Me.Label130.Location = New System.Drawing.Point(226, 49)
         Me.Label130.Name = "Label130"
         Me.Label130.Size = New System.Drawing.Size(30, 13)
         Me.Label130.TabIndex = 74
@@ -98,7 +101,7 @@ Partial Class Form1
         '
         Me.Label107.AutoSize = True
         Me.Label107.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label107.Location = New System.Drawing.Point(15, 30)
+        Me.Label107.Location = New System.Drawing.Point(10, 67)
         Me.Label107.Name = "Label107"
         Me.Label107.Size = New System.Drawing.Size(125, 18)
         Me.Label107.TabIndex = 73
@@ -107,7 +110,7 @@ Partial Class Form1
         'TextBox38
         '
         Me.TextBox38.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox38.Location = New System.Drawing.Point(234, 27)
+        Me.TextBox38.Location = New System.Drawing.Point(229, 64)
         Me.TextBox38.Name = "TextBox38"
         Me.TextBox38.Size = New System.Drawing.Size(149, 24)
         Me.TextBox38.TabIndex = 72
@@ -117,7 +120,7 @@ Partial Class Form1
         '
         Me.Label105.AutoSize = True
         Me.Label105.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label105.Location = New System.Drawing.Point(15, 60)
+        Me.Label105.Location = New System.Drawing.Point(10, 97)
         Me.Label105.Name = "Label105"
         Me.Label105.Size = New System.Drawing.Size(160, 18)
         Me.Label105.TabIndex = 70
@@ -126,7 +129,7 @@ Partial Class Form1
         'TextBox37
         '
         Me.TextBox37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox37.Location = New System.Drawing.Point(292, 57)
+        Me.TextBox37.Location = New System.Drawing.Point(287, 94)
         Me.TextBox37.Name = "TextBox37"
         Me.TextBox37.Size = New System.Drawing.Size(91, 24)
         Me.TextBox37.TabIndex = 67
@@ -136,7 +139,7 @@ Partial Class Form1
         '
         Me.Label102.AutoSize = True
         Me.Label102.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label102.Location = New System.Drawing.Point(231, 60)
+        Me.Label102.Location = New System.Drawing.Point(226, 97)
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(25, 18)
         Me.Label102.TabIndex = 66
@@ -241,9 +244,9 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(378, 298)
+        Me.Button1.Location = New System.Drawing.Point(234, 286)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 37)
+        Me.Button1.Size = New System.Drawing.Size(163, 37)
         Me.Button1.TabIndex = 81
         Me.Button1.Text = "Start"
         Me.Button1.UseVisualStyleBackColor = True
@@ -252,7 +255,7 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(233, 306)
+        Me.Label1.Location = New System.Drawing.Point(29, 294)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 18)
         Me.Label1.TabIndex = 76
@@ -264,29 +267,38 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(50, 37)
         Me.Button2.TabIndex = 82
-        Me.Button2.Text = "Go"
+        Me.Button2.Text = "Go 1x"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(276, 340)
+        Me.Button3.Location = New System.Drawing.Point(234, 329)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 37)
+        Me.Button3.Size = New System.Drawing.Size(163, 37)
         Me.Button3.TabIndex = 83
-        Me.Button3.Text = "test"
+        Me.Button3.Text = "test hex<->ascii conversions"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(15, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(170, 18)
+        Me.Label2.TabIndex = 80
+        Me.Label2.Text = "String from Lucid control"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(506, 380)
+        Me.ClientSize = New System.Drawing.Size(506, 376)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox9)
-        Me.Controls.Add(Me.TextBox39)
         Me.Controls.Add(Me.GroupBox14)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -323,4 +335,5 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label2 As Label
 End Class

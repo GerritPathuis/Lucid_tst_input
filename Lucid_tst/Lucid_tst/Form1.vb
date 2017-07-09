@@ -18,10 +18,10 @@ Public Class Form1
 
         If SerialPort1.IsOpen Then
             '--------- prepare request to Lucid Control------
-            GetIo(1) = &H48   'OPC= GetIoGroup
-            GetIo(2) = &H1    'Channel 1
+            GetIo(1) = &H46   'OPC= GetIoGroup
+            GetIo(2) = &H0    'Channel 1
 
-            ' GetIo(3) = &H1C  'Voltage range 0-30,000 mV (2Bytes)
+            'GetIo(3) = &H1C  'Voltage range 0-30,000 mV (2Bytes)
             GetIo(3) = &H1D  'Voltage range 0-100,000,000 mV (4Bytes)
             ' GetIo(3) = &H23   'Amp range 0-1,000,000 mAmp (4Bytes)
         End If
@@ -80,7 +80,7 @@ Public Class Form1
             SerialPort1.DataBits = 8                        'Open our serial port
             SerialPort1.ReadBufferSize = 8192               '4096
             SerialPort1.ReceivedBytesThreshold = 1
-            SerialPort1.DiscardNull = False                 'important otherwise it will not work
+            SerialPort1.DiscardNull = True                 'important otherwise it will not work
             SerialPort1.ReadTimeout = 500
             SerialPort1.WriteTimeout = 500
 
@@ -233,26 +233,28 @@ Public Class Form1
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim intext As String = String.Empty
         Dim intext_hex As String = String.Empty
+        Dim hex_str As String = "0123456789abcdef"
+        Dim s1 As String
 
-        intext_hex = String_Hex_to_ascii("0004" & "404b4c00")   'Test value 5.00 Volt (is OK)
-        intext = String_ascii_to_Hex_ascii2(intext_hex)         'Convert data to hex
-        MessageBox.Show("0004" & "404b4c00" & vbCrLf & intext)
+        s1 = "0004" & "404b4c00"
+        intext_hex = String_Hex_to_ascii(s1)            'Test value 5.00 Volt (is OK)
+        intext = String_ascii_to_Hex_ascii2(intext_hex) 'Convert data to hex
+        MessageBox.Show(s1 & vbCrLf & intext)
 
-        intext_hex = String_Hex_to_ascii("0004" & "40548900")  'Test value 9.00 Volt (is NOK)
-        intext = String_ascii_to_Hex_ascii2(intext_hex)         'Convert data to hex
-        MessageBox.Show("0004" & "40548900" & vbCrLf & intext)
+        s1 = "0004" & "40548900"
+        intext_hex = String_Hex_to_ascii(s1)            'Test value 9.00 Volt (is OK)
+        intext = String_ascii_to_Hex_ascii2(intext_hex) 'Convert data to hex
+        MessageBox.Show(s1 & vbCrLf & intext)
 
+        For i = 0 To hex_str.Length - 1
+            s1 = String.Empty
+            For j = 0 To hex_str.Length - 1
+                s1 &= hex_str.Substring(i, 1) & hex_str.Substring(j, 1)
+            Next
+            intext_hex = String_Hex_to_ascii(s1)            'Convert data to hex
+            intext = String_ascii_to_Hex_ascii2(intext_hex) 'Convert data to hex
+            MessageBox.Show(s1 & vbCrLf & intext)
+        Next
 
-        intext_hex = String_Hex_to_ascii("808182838485868788898a8b8c8d8e8f")
-        intext = String_ascii_to_Hex_ascii2(intext_hex)         'Convert data to hex
-        MessageBox.Show("808182838485868788898a8b8c8d8e8f" & vbCrLf & intext)
-
-        intext_hex = String_Hex_to_ascii("909192939495969798999a9b9c9d9e9f")
-        intext = String_ascii_to_Hex_ascii2(intext_hex)         'Convert data to hex
-        MessageBox.Show("909192939495969798999a9b9c9d9e9f" & vbCrLf & intext)
-
-        intext_hex = String_Hex_to_ascii("a0a1a2a3a4a5a6a7a8a9aaabacadaeaf")
-        intext = String_ascii_to_Hex_ascii2(intext_hex)         'Convert data to hex
-        MessageBox.Show("a0a1a2a3a4a5a6a7a8a9aaabacadaeaf" & vbCrLf & intext)
     End Sub
 End Class
